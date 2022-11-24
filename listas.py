@@ -1,8 +1,13 @@
-semana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"]
+nombre = "Esteban"
+print(nombre[0:4])
 
+for letra in nombre:
+    print(letra)
+
+
+semana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
 print(semana)
-
 print(semana[3])
 
-nombre = "Esteban"
-print(nombre[0:100])
+for dia in semana:
+    print(dia)
