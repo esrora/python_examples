@@ -3,7 +3,8 @@ import tkinter as tk
 # Funciones
 def saludo():
     print("Hola")
-    resultado.config(text="hola")
+    mensaje = caja.get()
+    resultado.config(text=mensaje)
 
 
 # Creo ventana
@@ -50,5 +51,10 @@ resultado = tk.Label(ventana,
     text="Mensaje"
 )
 resultado.pack()
+# Caja
+caja = tk.Entry(
+    ventana
+)
+caja.pack()
 
 ventana.mainloop()
