@@ -28,56 +28,64 @@ def division():
     resultado.config(text=calculo)
 
 ventana = tk.Tk()
+
+espacio1 = tk.Frame(ventana)
+espacio1.grid(row=0,column=0)
+espacio2 = tk.Frame(ventana)
+espacio2.grid(row=1,column=0)
+espacio3 = tk.Frame(ventana)
+espacio3.grid(row=2,column=0)
+
 numero1_etiq = tk.Label(
-    ventana,
+    espacio1,
     text="Dime un número"
 )
-numero1_etiq.pack()
+numero1_etiq.grid(row=0,column=0)
 numero1_caja = tk.Entry(
-    ventana,
+    espacio1,
     justify=tk.RIGHT
 )
-numero1_caja.pack()
+numero1_caja.grid(row=0,column=1)
 numero2_etiq = tk.Label(
-    ventana,
+    espacio1,
     text="Dime otro número"
 )
-numero2_etiq.pack()
+numero2_etiq.grid(row=1, column=0)
 numero2_caja = tk.Entry(
-    ventana,
+    espacio1,
     justify=tk.RIGHT
 )
-numero2_caja.pack()
+numero2_caja.grid(row=1, column=1)
 
 resultado = tk.Label(
-    ventana,
+    espacio2,
     text="RESULTADO"
 )
-resultado.pack()
+resultado.grid(row=0,column=0)
 
 suma_boton = tk.Button(
-    ventana,
+    espacio3,
     text="SUMA",
     command=suma
 )
-suma_boton.pack()
+suma_boton.grid(row=0,column=0)
 resta_boton = tk.Button(
-    ventana,
+    espacio3,
     text="RESTA",
     command=resta
 )
-resta_boton.pack()
+resta_boton.grid(row=0,column=1)
 multi_boton = tk.Button(
-    ventana,
+    espacio3,
     text="MULTI",
     command=multip
 )
-multi_boton.pack()
+multi_boton.grid(row=0,column=2)
 div_boton = tk.Button(
-    ventana,
+    espacio3,
     text="DIVISIÓN",
     command=division
 )
-div_boton.pack()
+div_boton.grid(row=0,column=3)
 
 ventana.mainloop()
